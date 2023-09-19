@@ -162,4 +162,5 @@ cython_debug/
 ~*
 .*
 ~$*
-workbooks/working_dir/*
+*.DS_*
+live/*
