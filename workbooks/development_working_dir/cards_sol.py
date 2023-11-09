@@ -170,3 +170,16 @@ class Hand(Deck):
         other_value = other.checkHand()
         #print(self_value, other_value)
         return self_value < other_value
+    
+    # Card Swapping
+    def dropCards(self, cards):
+        for card in cards:
+            self.deck.remove(card)
+    
+    def fillHand(self):
+        while len(self.deck) < self.size:
+            self.deck.append(self.deck.pop())
+    
+    def swapCards(self, cards):
+        self.dropCards(cards)
+        self.fillHand()
